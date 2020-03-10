@@ -1227,7 +1227,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4effe8;
+  background: #4f7df7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2776,7 +2776,7 @@ ul.breadcrumb li + li:last-child {
 }
 /*背景图片*/
 body {
-  background: url("https://images.cnblogs.com/cnblogs_com/cconstantine/1657860/o_2002290910282000_0fdd8a50a6c3eac9a3aea103b71085cd.jpg");
+  background: url("https://note.youdao.com/yws/api/personal/file/WEB956c0b0ec50195ec5607b85fb06b0dde?method=download&shareKey=caef3e0ae904b17c06c2488e0164182c");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
