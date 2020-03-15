@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Comet OJ c1847</title>
+    <url>/2020/03/15/c1847/</url>
+    <content><![CDATA[<h2 id="c1847"><a href="#c1847" class="headerlink" title="c1847"></a>c1847</h2><p>一道简单的字符串比较。</p>
+<p>枚举每一位，进行累加。</p>
+<p>这里用到了三目运算符。</p>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">条件 ? 若为真，则执行该处语句 : 若为假，则执行该处语句；</span><br></pre></td></tr></table></figure>
+<p>所以代码如下:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cerr</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mmax = <span class="number">100000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[mmax + <span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> len,ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;len;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; len;++i)&#123;</span><br><span class="line">		s[i] == <span class="string">'G'</span> ? ++ans:ans; </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原题地址<a href="https://www.cometoj.com/problem/1847" target="_blank" rel="noopener">https://www.cometoj.com/problem/1847</a></p>
+]]></content>
+      <categories>
+        <category>Comet OJ</category>
+      </categories>
+      <tags>
+        <tag>模拟</tag>
+        <tag>字符串</tag>
+        <tag>CometOJ</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Comet OJ c1477</title>
     <url>/2020/03/11/c1477/</url>
-    <content><![CDATA[<h2 id="P1477"><a href="#P1477" class="headerlink" title="P1477"></a>P1477</h2><p>这种题目显然是签到题，简单的字符串比较。</p>
+    <content><![CDATA[<h2 id="c1477"><a href="#c1477" class="headerlink" title="c1477"></a>c1477</h2><p>这种题目显然是签到题，简单的字符串比较。</p>
 <p>但要注意代码量。</p>
 <p>我们不能傻傻打几重循环，显然，数组是一个更好地选择。</p>
 <a id="more"></a>
 <p>代码如下：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cerr</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">1000</span>+<span class="number">10</span>];</span><br><span class="line"><span class="keyword">char</span> st[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n,len,ans=<span class="number">0</span>;</span><br><span class="line">    st[<span class="number">1</span>]=<span class="string">'a'</span>;st[<span class="number">2</span>]=<span class="string">'c'</span>;st[<span class="number">3</span>]=<span class="string">'p'</span>;st[<span class="number">4</span>]=<span class="string">'t'</span>;st[<span class="number">5</span>]=<span class="string">'y'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;s+<span class="number">1</span>;</span><br><span class="line">        len=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">5</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[len<span class="number">-5</span>+i]!=st[i]) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(i==<span class="number">6</span>) ans++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原题地址<a href="https://www.cometoj.com/problem/1477" target="_blank" rel="noopener">https://www.cometoj.com/problem/1477</a></p>
 ]]></content>
       <categories>
         <category>Comet OJ</category>
@@ -16,12 +38,13 @@
       <tags>
         <tag>字符串</tag>
         <tag>枚举</tag>
+        <tag>CometOJ</tag>
       </tags>
   </entry>
   <entry>
-    <title>Comet OJ c1826</title>
-    <url>/2020/03/10/c1826/</url>
-    <content><![CDATA[<h2 id="P1826"><a href="#P1826" class="headerlink" title="P1826"></a>P1826</h2><p>这道题教会了我们观察。</p>
+    <title>Comet OJ c1023</title>
+    <url>/2020/03/10/c1023/</url>
+    <content><![CDATA[<h2 id="c1023"><a href="#c1023" class="headerlink" title="c1023"></a>c1023</h2><p>这道题教会了我们观察。</p>
 <p>理解题意后得到要求我们输出 </p>
 <a id="more"></a>
 <script type="math/tex; mode=display">
@@ -30,6 +53,7 @@
     S = \frac{(1+n)n}{2}</script><p>自然得到</p>
 <script type="math/tex; mode=display">
     ans = (1+n)n/2-n</script><p>下附代码<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">endl</span>;<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cerr</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> N;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;N;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;(N+<span class="number">1</span>)*N-N;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>原题地址<a href="https://www.cometoj.com/problem/1023" target="_blank" rel="noopener">https://www.cometoj.com/problem/1023</a></p>
 ]]></content>
       <categories>
         <category>Comet OJ</category>
@@ -37,6 +61,7 @@
       <tags>
         <tag>数学</tag>
         <tag>模拟</tag>
+        <tag>CometOJ</tag>
       </tags>
   </entry>
   <entry>
