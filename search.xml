@@ -1,16 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CF contest 1 Translation</title>
-    <url>/2020/06/13/CF-contest-1-Translation/</url>
-    <content><![CDATA[]]></content>
+    <title>伪保姆级博客开设教程</title>
+    <url>/2021/09/05/%E4%BC%AA%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%8D%9A%E5%AE%A2%E5%BC%80%E8%AE%BE%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="伪保姆级博客开设教程"><a href="#伪保姆级博客开设教程" class="headerlink" title="伪保姆级博客开设教程"></a>伪保姆级博客开设教程</h2><p><strong>本文不涉及任何技术细节，别问，问就是我不知道。</strong></p>
+<p><em>不管白猫黑猫，能抓老鼠的就是好猫 。——Mr.Deng</em></p>
+<p><em>我不曾了解轮子是如何制造的，只要他能转起来可以了。——克拉克 康斯坦丁(Clark Constantine)</em></p>
+<p><del>没有一个计算机专业学生能拒绝拥有自己的博客，除非囊中羞涩没钱买服务器。</del></p>
+<p>现在，我为大家提供一个免费搭建博客的方法。</p>
+<p>可以先看看<a href="clconstantine.github.io">效果</a>(不过我就瞎折腾了一下，真正更新就咕咕咕咕咕了)</p>
+<h4 id="必备工具"><a href="#必备工具" class="headerlink" title="必备工具"></a>必备工具</h4><a id="more"></a>
+<ul>
+<li>电脑</li>
+<li><del>科学上网</del></li>
+<li>会markdown的你(当然你会git &amp; node.js更好  <del>我也不会</del>)</li>
+</ul>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+<li><p>注册一个<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>账号</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB21b5aec9bdc20561c980f7dc03dfb957?method=download&amp;shareKey=24e3345346d77491cbb8dc5dd6d657c3" alt=""></p>
+</li>
+<li><p>根据自己情况安装<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">node.js</a></p>
+<p>这一步要自己解决哦，google bing baidu 等着你。</p>
+<p>官方文档 <a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener">en</a> <a href="http://nodejs.cn/learn" target="_blank" rel="noopener">cn</a></p>
+</li>
+<li><p>更新npm</p>
+<p>打开cmd，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure>
+<p>等待更新完毕。</p>
+<p>官方文档 <a href="https://docs.npmjs.com/" target="_blank" rel="noopener">en</a>  <a href="https://www.npmjs.cn/" target="_blank" rel="noopener">cn</a></p>
+</li>
+<li><p>根据电脑系统安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git</a> (以下使用以git for windows 为例 <del>用Linux的大佬自然可以不用看了，浪费巨巨您的时间</del>)</p>
+<p>可以参考这篇<a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html" target="_blank" rel="noopener">博客</a>(你发现了嘛，google bing baidu 才是硬道理)</p>
+</li>
+</ul>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><ul>
+<li><p>登录github，点击右上角头像 <strong>旁边</strong> 的加号</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB74648d00178005426471753cb28d1139?method=download&amp;shareKey=47a74853ad9c6f6d5383c399b66a7f31" alt=""></p>
+</li>
+<li><p>点击 new repository</p>
+</li>
+</ul>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB780047cf02634af584b35b1e645f1981?method=download&amp;shareKey=f928351ff85e6d5bb0e37f19e20b98a2" alt=""></p>
+<ul>
+<li><p>在 repository name 中填入 <em>username.github.io</em>，其中username为你的用户名。</p>
+<p>比如你叫的用户名为 <em>shenben</em>，就填入 <em>shenben.github.io</em> </p>
+<p>然后创建。</p>
+<p>注意：</p>
+<ul>
+<li>注册的邮箱记得验证</li>
+<li>由于奇怪的原因，部分仓库创建后需要等待一段时间才会显示。</li>
+</ul>
+</li>
+<li><p>创建完成后不用管跳出来的东西。</p>
+</li>
+</ul>
+<h4 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置ssh key</h4><ul>
+<li><p>既然是本地更新再传的网上，必然要和服务器连接，那如何让服务器知道你是你呢，这时ssh  key就派上用场了。</p>
+</li>
+<li><p>如果你之前没有用过ssh key ，打开cmd，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>记得把 <em>你的邮箱</em> 替换掉</p>
+<p>然后打三个回车</p>
+</li>
+<li><p>如果你用过ssh key，可以跳过上一步。</p>
+</li>
+<li><p>上面一步最终会在你电脑的 <strong>用户目录</strong> 下生成一个.ssh的文件夹，打开后用 <strong>记事本等</strong> 方式打开 <em>id_rsa.pub</em>，复制。</p>
+</li>
+<li><p>进入github，点击右上角头像，进入settings -&gt;SSH and GPG keys -&gt;new SSH key</p>
+</li>
+</ul>
+<p>  <img src="https://note.youdao.com/yws/api/personal/file/WEB8486e52a1516097ecfc4a1da49738b00?method=download&amp;shareKey=3894280e4c986daf6e6864a0938f4baf" alt="4"></p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBe02d2d1ba5979a0dd32aa45fc30eb886?method=download&amp;shareKey=7a17ec92e6402987f7ff4744f33ec30e" alt="Inked5_LI"></p>
+<ul>
+<li>title随便编，把刚才复制的东西粘贴到key里，保存</li>
+</ul>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBa8058f2552915c8cd8963ef6b3af3815?method=download&amp;shareKey=476125c2f9adac13c2babedf3af9c73c" alt="6"></p>
+<ul>
+<li>最后测试，输入</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<pre><code>若出现
+</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi *********! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<pre><code>的字样，则已经成功。
+</code></pre><h4 id="用hexo生成博客"><a href="#用hexo生成博客" class="headerlink" title="用hexo生成博客"></a>用hexo生成博客</h4><ul>
+<li><p>hexo时一个非常强大的博客发布工具，拥有众多插件与主题(theme)。</p>
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">官网</a> <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">github官方</a></p>
+</li>
+<li><p>原理：</p>
+<p>我只知道是保存静态文件，其他的咕咕咕咕咕咕咕。</p>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>hexo版本更新较快，使用时不同主题时记得查看支持版本。</li>
+<li>hexo 有两种 <em>_config.yml</em> 文件，一个再根目录下的全局 <em>_config.yml</em> ，一个在各种theme下。</li>
+</ul>
+</li>
+<li><p>安装，打开cmd，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在使用hexo之前，我们首先要学习几个简单的cmd命令</p>
+<ul>
+<li><p><em>cd</em> ：进入不同文件夹</p>
+<p>e.g.      cd 新建文件夹        进入所在目录下的新建文件夹</p>
+<pre><code>    cd ..              返回上一文件夹（返回父文件夹）
+</code></pre></li>
+<li><p><em>dir</em> ：查看某文件夹下的所有文件和文件夹。</p>
+<p>e.g. <img src="https://note.youdao.com/yws/api/personal/file/WEBbe3e517671e12a3a52877296e938e38e?method=download&amp;shareKey=25a4c62561c436b514445455a479a77d" alt="7"></p>
+</li>
+<li><p>其他的······用的时候再查呗。</p>
+</li>
+</ul>
+</li>
+<li><p>找一个文件夹，比如在D盘新建一个文件夹 <em>我的blog</em> （建议还是英文路径，这里只是示范）</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB2fe4aa4a566a213ff58dae1447cd4555?method=download&amp;shareKey=a3dc2c923d491f247faca5a5e42ab6f8" alt="8"></p>
+<p>打开cmd，进入该目录</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB8e4b71c351743008fec8bc0296d6da9b?method=download&amp;shareKey=8fc8deade5c3364bce4d8a1be07657dc" alt="9"></p>
+<p>输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>进行初始化，完成后出现下列文件。</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB5226d9dc370370f2fb28ae10e36a8c3f?method=download&amp;shareKey=a2bfce00c417fb9f2ca255866ab6bc9f" alt="10"></p>
+</li>
+<li><p>接下来介绍hexo的两个命令</p>
+<p> <em>hexo g</em> ：生成网页文件。</p>
+<p> <em>hexo s</em> ：启动本地预览服务，启动后用浏览器打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a>即可看到内容</p>
+<pre><code>       （如果端口占用冲突，请参考google bing baidu ）ovo
+</code></pre></li>
+<li><p>我们试一下</p>
+</li>
+</ul>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB06475fd0cf5266ce4a911e7f346e7a76?method=download&amp;shareKey=0416781be8e94d9fe8a81b797e530778" alt="11"></p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB8ec0551a947dd32b5cb53cf53ab6ebbe?method=download&amp;shareKey=1e8ae7a8e73dfa80d6a9472ed8cfc30f" alt="12"></p>
+<ul>
+<li>当然这是默认主题，修改主题属于进阶内容，暂时放一放。</li>
+</ul>
+<h4 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h4><ul>
+<li><p>以上属于本地预览，我们要做的事请当然是上传到网上让大家访问。</p>
+</li>
+<li><p>在上传前，还需要在 <strong>根目录</strong> 中的 <em>_config.yml</em> 中配置deploy部分</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>记得把 <em>username</em> 换成你自己的用户名。</p>
+</li>
+<li><p>接下来安装一个插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>请使用git bash执行上述安装命令。（你问我git bash在哪儿？桌面右键。）</p>
+</li>
+<li><p>在保证 <strong>ssh key</strong> ，<strong>deploy</strong>， <strong>插件</strong>安装完毕之后，打开cmd，执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可上传成功。</p>
+</li>
+<li><p>接下来访问 <em>username.github.io</em> 就可以看到你的博客了。</p>
+</li>
+<li><p>绑定域名以及cdn加速属于进阶内容，暂时放一放。</p>
+</li>
+<li><p>以下为hexo常用命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">缩写：</span><br><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br><span class="line"></span><br><span class="line">组合：</span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="更新文章"><a href="#更新文章" class="headerlink" title="更新文章"></a>更新文章</h4><ul>
+<li><p>博客当然要有自己的文章了，接下来教大家如何更新文章。</p>
+</li>
+<li><p>首先还是打开cmd，cd进入博客根目录。</p>
+</li>
+<li><p>执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postname&quot;</span><br></pre></td></tr></table></figure>
+<p>就可以新建文章，其中双引号不可省略，postname为文章标题，请随意。</p>
+</li>
+<li><p>生成的文件在根目录\source\_posts下，为.md文件。</p>
+</li>
+<li><p>md文件使用markdown语言编写。markdown是一门轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。推荐大家使用typora进行编辑操作。</p>
+</li>
+<li><p>关于markdown的学习，网上一抓一大把，这里就不赘述了。</p>
+</li>
+<li><p>更新完文章后，别忘了生成并上传。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有时预览会发现文章太长，这时需要在文章恰当处添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>好了以上就是博客入门搭建了，希望大家折腾的开心。</p>
+<p>作者：Constantine</p>
+]]></content>
       <categories>
-        <category>Codeforces</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>Codeforces</tag>
-        <tag>翻译</tag>
-        <tag>题解</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -30,8 +205,8 @@
       </categories>
       <tags>
         <tag>模拟</tag>
-        <tag>字符串</tag>
         <tag>CometOJ</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -49,9 +224,9 @@
         <category>Comet OJ</category>
       </categories>
       <tags>
+        <tag>CometOJ</tag>
         <tag>字符串</tag>
         <tag>枚举</tag>
-        <tag>CometOJ</tag>
       </tags>
   </entry>
   <entry>
