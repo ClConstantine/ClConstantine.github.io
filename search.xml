@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CF contest 1 Translation</title>
+    <url>/2020/06/13/CF-contest-1-Translation/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Codeforces</category>
+      </categories>
+      <tags>
+        <tag>Codeforces</tag>
+        <tag>翻译</tag>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Comet OJ c1847</title>
     <url>/2020/03/15/c1847/</url>
     <content><![CDATA[<h2 id="c1847"><a href="#c1847" class="headerlink" title="c1847"></a>c1847</h2><p>一道简单的字符串比较。</p>
