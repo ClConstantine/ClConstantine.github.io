@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>欧拉筛备忘录</title>
-    <url>/2021/09/22/%E6%AC%A7%E6%8B%89%E7%AD%9B%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    <url>/2021/09/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E5%A4%87%E5%BF%98%E5%BD%95/</url>
     <content><![CDATA[<h2 id="欧拉筛-Sieve-of-Euler-备忘录"><a href="#欧拉筛-Sieve-of-Euler-备忘录" class="headerlink" title="欧拉筛(Sieve of Euler)备忘录"></a>欧拉筛(Sieve of Euler)备忘录</h2><ul>
 <li><p>对 $ i\ mod\ prime[j] $ 的理解</p>
 <p>当 $ i\ mod\ prime[j] = 0$ 时， $i = prime[j] * k $ </p>
