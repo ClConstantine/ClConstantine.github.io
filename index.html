@@ -328,7 +328,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 11:43:27" itemprop="dateModified" datetime="2021-09-22T11:43:27+08:00">2021-09-22</time>
+                <time title="修改时间：2022-03-25 20:45:42" itemprop="dateModified" datetime="2022-03-25T20:45:42+08:00">2022-03-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -355,9 +355,10 @@
       
           <h2 id="欧拉筛-Sieve-of-Euler-备忘录"><a href="#欧拉筛-Sieve-of-Euler-备忘录" class="headerlink" title="欧拉筛(Sieve of Euler)备忘录"></a>欧拉筛(Sieve of Euler)备忘录</h2><ul>
 <li><p>对 $ i\ mod\ prime[j] $ 的理解</p>
-<p>当 $ i\ mod\ prime[j] = 0$ 时， $i = prime[j] * k $ </p>
-<p>故 $i <em> prime[j  + 1] = prime[i]  </em> k * prime[j + 1]$</p>
-<p>根据欧拉筛的定义，为了让一个合数的 <strong>最小素因子</strong> 将他们筛去，此时应该break，等待 $i = prime[j + 1] * k$ 时再进行操作.</p>
+<p>当 $ i\ mod\ prime[j] = 0$ 时， $i = prime[j] * k ​$ </p>
+<p>故 </p>
+<script type="math/tex; mode=display">
+i  * prime[j  + 1] = k * prime[i]  * prime[j + 1]</script><p>根据欧拉筛的定义，为了让一个合数的 <strong>最小素因子</strong> 将他们筛去，此时应该break，等待 $i = prime[j + 1] * k​$ 时再进行操作.</p>
 <p>如此便保证了每一个数最多被筛都一遍，将复杂度从$O(nlognlogn)$降低至 $O(n)$ .</p>
           <!--noindex-->
             <div class="post-button">

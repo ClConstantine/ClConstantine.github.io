@@ -149,9 +149,10 @@ min(n - i + 1,max(0,(ans - 1) / i - i + 1))</script><p>那么就可以二分了(
     <url>/2021/09/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E5%A4%87%E5%BF%98%E5%BD%95/</url>
     <content><![CDATA[<h2 id="欧拉筛-Sieve-of-Euler-备忘录"><a href="#欧拉筛-Sieve-of-Euler-备忘录" class="headerlink" title="欧拉筛(Sieve of Euler)备忘录"></a>欧拉筛(Sieve of Euler)备忘录</h2><ul>
 <li><p>对 $ i\ mod\ prime[j] $ 的理解</p>
-<p>当 $ i\ mod\ prime[j] = 0$ 时， $i = prime[j] * k $ </p>
-<p>故 $i <em> prime[j  + 1] = prime[i]  </em> k * prime[j + 1]$</p>
-<p>根据欧拉筛的定义，为了让一个合数的 <strong>最小素因子</strong> 将他们筛去，此时应该break，等待 $i = prime[j + 1] * k$ 时再进行操作.</p>
+<p>当 $ i\ mod\ prime[j] = 0$ 时， $i = prime[j] * k ​$ </p>
+<p>故 </p>
+<script type="math/tex; mode=display">
+i  * prime[j  + 1] = k * prime[i]  * prime[j + 1]</script><p>根据欧拉筛的定义，为了让一个合数的 <strong>最小素因子</strong> 将他们筛去，此时应该break，等待 $i = prime[j + 1] * k​$ 时再进行操作.</p>
 <p>如此便保证了每一个数最多被筛都一遍，将复杂度从$O(nlognlogn)$降低至 $O(n)$ .</p>
 <a id="more"></a>
 <p>代码如下:</p>
@@ -527,8 +528,8 @@ ans = (n+1)n-n</script><p>下附代码<br><figure class="highlight cpp"><table><
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>比赛</tag>
         <tag>uncompleted</tag>
+        <tag>比赛</tag>
       </tags>
   </entry>
 </search>
